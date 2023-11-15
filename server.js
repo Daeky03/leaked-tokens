@@ -5,6 +5,11 @@ const axios = require('axios');
 const app = express();
 const port = 3000;
 
+app.get("/", async (req, res) => {
+  res.send("Aktif")
+})
+         
+
 app.get('/request', async (req, res) => {
 const url = req.query.link;
 if(!url) return;
